@@ -1,0 +1,742 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A58BE8594E5C58E96691D636 /* Pods_ZazCar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC7F9CF5E787DB596B7D628 /* Pods_ZazCar.framework */; };
+		B034FC311CB1FCED00010157 /* RepositorieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0535E321CB1E90F005941BB /* RepositorieViewController.swift */; };
+		B034FC321CB1FCED00010157 /* RepositorieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0535E321CB1E90F005941BB /* RepositorieViewController.swift */; };
+		B034FC351CB1FDB300010157 /* GitHubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034FC341CB1FDB300010157 /* GitHubService.swift */; };
+		B034FC361CB1FDB300010157 /* GitHubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034FC341CB1FDB300010157 /* GitHubService.swift */; };
+		B034FC371CB1FDB300010157 /* GitHubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034FC341CB1FDB300010157 /* GitHubService.swift */; };
+		B034FC391CB1FEE700010157 /* PullRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034FC381CB1FEE700010157 /* PullRequestViewController.swift */; };
+		B034FC3A1CB1FEE700010157 /* PullRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034FC381CB1FEE700010157 /* PullRequestViewController.swift */; };
+		B034FC3B1CB1FEE700010157 /* PullRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034FC381CB1FEE700010157 /* PullRequestViewController.swift */; };
+		B034FC421CB20AD100010157 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034FC411CB20AD100010157 /* Utils.swift */; };
+		B034FC431CB20AD100010157 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034FC411CB20AD100010157 /* Utils.swift */; };
+		B034FC441CB20AD100010157 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034FC411CB20AD100010157 /* Utils.swift */; };
+		B034FC461CB20CED00010157 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = B034FC451CB20CED00010157 /* Configuration.plist */; };
+		B034FC471CB20CED00010157 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = B034FC451CB20CED00010157 /* Configuration.plist */; };
+		B034FC481CB20CED00010157 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = B034FC451CB20CED00010157 /* Configuration.plist */; };
+		B034FC501CBA8CC700010157 /* RepositorieObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034FC4F1CBA8CC700010157 /* RepositorieObject.swift */; };
+		B034FC511CBA8CC700010157 /* RepositorieObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034FC4F1CBA8CC700010157 /* RepositorieObject.swift */; };
+		B034FC521CBA8CC700010157 /* RepositorieObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034FC4F1CBA8CC700010157 /* RepositorieObject.swift */; };
+		B034FC541CBA8CE000010157 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034FC531CBA8CE000010157 /* Item.swift */; };
+		B034FC551CBA8CE000010157 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034FC531CBA8CE000010157 /* Item.swift */; };
+		B034FC561CBA8CE000010157 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034FC531CBA8CE000010157 /* Item.swift */; };
+		B034FC581CBA8ED500010157 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034FC571CBA8ED500010157 /* Owner.swift */; };
+		B034FC591CBA8ED500010157 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034FC571CBA8ED500010157 /* Owner.swift */; };
+		B034FC5A1CBA8ED500010157 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034FC571CBA8ED500010157 /* Owner.swift */; };
+		B0535E041CB1DAE1005941BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0535E031CB1DAE1005941BB /* AppDelegate.swift */; };
+		B0535E091CB1DAE1005941BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0535E071CB1DAE1005941BB /* Main.storyboard */; };
+		B0535E0B1CB1DAE1005941BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0535E0A1CB1DAE1005941BB /* Assets.xcassets */; };
+		B0535E0E1CB1DAE1005941BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0535E0C1CB1DAE1005941BB /* LaunchScreen.storyboard */; };
+		B0535E1C1CB1DE01005941BB /* ZazCarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0535E1B1CB1DE01005941BB /* ZazCarUITests.swift */; };
+		B0535E2A1CB1DE16005941BB /* ZazCarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0535E291CB1DE16005941BB /* ZazCarTests.swift */; };
+		B0535E331CB1E90F005941BB /* RepositorieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0535E321CB1E90F005941BB /* RepositorieViewController.swift */; };
+		B0535E371CB1EBEF005941BB /* RepositorieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0535E351CB1EBEF005941BB /* RepositorieCell.swift */; };
+		B0535E381CB1EBEF005941BB /* RepositorieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0535E351CB1EBEF005941BB /* RepositorieCell.swift */; };
+		B0535E391CB1EBEF005941BB /* RepositorieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0535E351CB1EBEF005941BB /* RepositorieCell.swift */; };
+		B0535E3A1CB1EBEF005941BB /* RepositorieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0535E361CB1EBEF005941BB /* RepositorieCell.xib */; };
+		B0535E3B1CB1EBEF005941BB /* RepositorieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0535E361CB1EBEF005941BB /* RepositorieCell.xib */; };
+		B0535E3C1CB1EBEF005941BB /* RepositorieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0535E361CB1EBEF005941BB /* RepositorieCell.xib */; };
+		B0535E3F1CB1F2D2005941BB /* PullRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0535E3D1CB1F2D2005941BB /* PullRequestCell.swift */; };
+		B0535E401CB1F2D2005941BB /* PullRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0535E3D1CB1F2D2005941BB /* PullRequestCell.swift */; };
+		B0535E411CB1F2D2005941BB /* PullRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0535E3D1CB1F2D2005941BB /* PullRequestCell.swift */; };
+		B0535E421CB1F2D2005941BB /* PullRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0535E3E1CB1F2D2005941BB /* PullRequestCell.xib */; };
+		B0535E431CB1F2D2005941BB /* PullRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0535E3E1CB1F2D2005941BB /* PullRequestCell.xib */; };
+		B0535E441CB1F2D2005941BB /* PullRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0535E3E1CB1F2D2005941BB /* PullRequestCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B0535E1E1CB1DE01005941BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0535DF81CB1DAE0005941BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0535DFF1CB1DAE0005941BB;
+			remoteInfo = ZazCar;
+		};
+		B0535E2C1CB1DE16005941BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0535DF81CB1DAE0005941BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0535DFF1CB1DAE0005941BB;
+			remoteInfo = ZazCar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		013C354BD13D402F7E635167 /* Pods-ZazCar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZazCar.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZazCar/Pods-ZazCar.release.xcconfig"; sourceTree = "<group>"; };
+		8EC7F9CF5E787DB596B7D628 /* Pods_ZazCar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZazCar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B034FC341CB1FDB300010157 /* GitHubService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GitHubService.swift; path = Services/GitHubService.swift; sourceTree = "<group>"; };
+		B034FC381CB1FEE700010157 /* PullRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PullRequestViewController.swift; path = ViewControllers/PullRequestViewController.swift; sourceTree = "<group>"; };
+		B034FC3D1CB2009700010157 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		B034FC401CB2073F00010157 /* BridgeFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BridgeFile.h; path = Utils/BridgeFile/BridgeFile.h; sourceTree = "<group>"; };
+		B034FC411CB20AD100010157 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Utils/Utils.swift; sourceTree = "<group>"; };
+		B034FC451CB20CED00010157 /* Configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
+		B034FC4F1CBA8CC700010157 /* RepositorieObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RepositorieObject.swift; path = Objects/Repositorie/RepositorieObject.swift; sourceTree = "<group>"; };
+		B034FC531CBA8CE000010157 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Item.swift; path = Objects/Repositorie/Item.swift; sourceTree = "<group>"; };
+		B034FC571CBA8ED500010157 /* Owner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Owner.swift; path = Objects/Repositorie/Owner.swift; sourceTree = "<group>"; };
+		B0535E001CB1DAE0005941BB /* ZazCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZazCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0535E031CB1DAE1005941BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B0535E081CB1DAE1005941BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B0535E0A1CB1DAE1005941BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B0535E0D1CB1DAE1005941BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B0535E0F1CB1DAE1005941BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0535E191CB1DE01005941BB /* ZazCarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZazCarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0535E1B1CB1DE01005941BB /* ZazCarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZazCarUITests.swift; sourceTree = "<group>"; };
+		B0535E1D1CB1DE01005941BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0535E271CB1DE16005941BB /* ZazCarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZazCarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0535E291CB1DE16005941BB /* ZazCarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZazCarTests.swift; sourceTree = "<group>"; };
+		B0535E2B1CB1DE16005941BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0535E321CB1E90F005941BB /* RepositorieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RepositorieViewController.swift; path = ViewControllers/RepositorieViewController.swift; sourceTree = "<group>"; };
+		B0535E351CB1EBEF005941BB /* RepositorieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RepositorieCell.swift; path = Cells/RepositorieCell.swift; sourceTree = "<group>"; };
+		B0535E361CB1EBEF005941BB /* RepositorieCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RepositorieCell.xib; path = Cells/RepositorieCell.xib; sourceTree = "<group>"; };
+		B0535E3D1CB1F2D2005941BB /* PullRequestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PullRequestCell.swift; path = Cells/PullRequestCell.swift; sourceTree = "<group>"; };
+		B0535E3E1CB1F2D2005941BB /* PullRequestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PullRequestCell.xib; path = Cells/PullRequestCell.xib; sourceTree = "<group>"; };
+		BD811029B69EF390FC894E97 /* Pods-ZazCar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZazCar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZazCar/Pods-ZazCar.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B0535DFD1CB1DAE0005941BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A58BE8594E5C58E96691D636 /* Pods_ZazCar.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0535E161CB1DE01005941BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0535E241CB1DE16005941BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A3DBC1DD9294ECF4BCFDACA8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8EC7F9CF5E787DB596B7D628 /* Pods_ZazCar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B034FC331CB1FD7500010157 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B034FC341CB1FDB300010157 /* GitHubService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		B034FC3E1CB206EA00010157 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B034FC3F1CB2071C00010157 /* BridgeFile */,
+				B034FC411CB20AD100010157 /* Utils.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		B034FC3F1CB2071C00010157 /* BridgeFile */ = {
+			isa = PBXGroup;
+			children = (
+				B034FC401CB2073F00010157 /* BridgeFile.h */,
+			);
+			name = BridgeFile;
+			sourceTree = "<group>";
+		};
+		B034FC491CB227F500010157 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				B034FC4E1CBA8C7A00010157 /* Repositorie */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		B034FC4E1CBA8C7A00010157 /* Repositorie */ = {
+			isa = PBXGroup;
+			children = (
+				B034FC4F1CBA8CC700010157 /* RepositorieObject.swift */,
+				B034FC531CBA8CE000010157 /* Item.swift */,
+				B034FC571CBA8ED500010157 /* Owner.swift */,
+			);
+			name = Repositorie;
+			sourceTree = "<group>";
+		};
+		B0535DF71CB1DAE0005941BB = {
+			isa = PBXGroup;
+			children = (
+				B0535E021CB1DAE1005941BB /* ZazCar */,
+				B0535E1A1CB1DE01005941BB /* ZazCarUITests */,
+				B0535E281CB1DE16005941BB /* ZazCarTests */,
+				B0535E011CB1DAE0005941BB /* Products */,
+				FF270EAE5BA794C0DC0890D5 /* Pods */,
+				A3DBC1DD9294ECF4BCFDACA8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B0535E011CB1DAE0005941BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B0535E001CB1DAE0005941BB /* ZazCar.app */,
+				B0535E191CB1DE01005941BB /* ZazCarUITests.xctest */,
+				B0535E271CB1DE16005941BB /* ZazCarTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B0535E021CB1DAE1005941BB /* ZazCar */ = {
+			isa = PBXGroup;
+			children = (
+				B034FC491CB227F500010157 /* Objects */,
+				B034FC3E1CB206EA00010157 /* Utils */,
+				B034FC331CB1FD7500010157 /* Services */,
+				B0535E341CB1E9FC005941BB /* Cells */,
+				B0535E311CB1E22B005941BB /* ViewControllers */,
+				B0535E031CB1DAE1005941BB /* AppDelegate.swift */,
+				B0535E071CB1DAE1005941BB /* Main.storyboard */,
+				B0535E0A1CB1DAE1005941BB /* Assets.xcassets */,
+				B0535E0C1CB1DAE1005941BB /* LaunchScreen.storyboard */,
+				B0535E0F1CB1DAE1005941BB /* Info.plist */,
+				B034FC451CB20CED00010157 /* Configuration.plist */,
+			);
+			path = ZazCar;
+			sourceTree = "<group>";
+		};
+		B0535E1A1CB1DE01005941BB /* ZazCarUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B0535E1B1CB1DE01005941BB /* ZazCarUITests.swift */,
+				B0535E1D1CB1DE01005941BB /* Info.plist */,
+			);
+			path = ZazCarUITests;
+			sourceTree = "<group>";
+		};
+		B0535E281CB1DE16005941BB /* ZazCarTests */ = {
+			isa = PBXGroup;
+			children = (
+				B0535E291CB1DE16005941BB /* ZazCarTests.swift */,
+				B0535E2B1CB1DE16005941BB /* Info.plist */,
+			);
+			path = ZazCarTests;
+			sourceTree = "<group>";
+		};
+		B0535E311CB1E22B005941BB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B0535E321CB1E90F005941BB /* RepositorieViewController.swift */,
+				B034FC381CB1FEE700010157 /* PullRequestViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B0535E341CB1E9FC005941BB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B0535E351CB1EBEF005941BB /* RepositorieCell.swift */,
+				B0535E361CB1EBEF005941BB /* RepositorieCell.xib */,
+				B0535E3D1CB1F2D2005941BB /* PullRequestCell.swift */,
+				B0535E3E1CB1F2D2005941BB /* PullRequestCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		FF270EAE5BA794C0DC0890D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD811029B69EF390FC894E97 /* Pods-ZazCar.debug.xcconfig */,
+				013C354BD13D402F7E635167 /* Pods-ZazCar.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B0535DFF1CB1DAE0005941BB /* ZazCar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0535E121CB1DAE1005941BB /* Build configuration list for PBXNativeTarget "ZazCar" */;
+			buildPhases = (
+				DDD98CDCF0B8B0744AA125AC /* Check Pods Manifest.lock */,
+				B0535DFC1CB1DAE0005941BB /* Sources */,
+				B0535DFD1CB1DAE0005941BB /* Frameworks */,
+				B0535DFE1CB1DAE0005941BB /* Resources */,
+				38809491379F0C271970547B /* Embed Pods Frameworks */,
+				617823B22FB402FBEE61872C /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZazCar;
+			productName = ZazCar;
+			productReference = B0535E001CB1DAE0005941BB /* ZazCar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B0535E181CB1DE01005941BB /* ZazCarUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0535E221CB1DE01005941BB /* Build configuration list for PBXNativeTarget "ZazCarUITests" */;
+			buildPhases = (
+				B0535E151CB1DE01005941BB /* Sources */,
+				B0535E161CB1DE01005941BB /* Frameworks */,
+				B0535E171CB1DE01005941BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0535E1F1CB1DE01005941BB /* PBXTargetDependency */,
+			);
+			name = ZazCarUITests;
+			productName = ZazCarUITests;
+			productReference = B0535E191CB1DE01005941BB /* ZazCarUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		B0535E261CB1DE16005941BB /* ZazCarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0535E2E1CB1DE16005941BB /* Build configuration list for PBXNativeTarget "ZazCarTests" */;
+			buildPhases = (
+				B0535E231CB1DE16005941BB /* Sources */,
+				B0535E241CB1DE16005941BB /* Frameworks */,
+				B0535E251CB1DE16005941BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0535E2D1CB1DE16005941BB /* PBXTargetDependency */,
+			);
+			name = ZazCarTests;
+			productName = ZazCarTests;
+			productReference = B0535E271CB1DE16005941BB /* ZazCarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B0535DF81CB1DAE0005941BB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Finotti;
+				TargetAttributes = {
+					B0535DFF1CB1DAE0005941BB = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = VZB2Z99GV8;
+					};
+					B0535E181CB1DE01005941BB = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = VZB2Z99GV8;
+						TestTargetID = B0535DFF1CB1DAE0005941BB;
+					};
+					B0535E261CB1DE16005941BB = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = VZB2Z99GV8;
+						TestTargetID = B0535DFF1CB1DAE0005941BB;
+					};
+				};
+			};
+			buildConfigurationList = B0535DFB1CB1DAE0005941BB /* Build configuration list for PBXProject "ZazCar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B0535DF71CB1DAE0005941BB;
+			productRefGroup = B0535E011CB1DAE0005941BB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B0535DFF1CB1DAE0005941BB /* ZazCar */,
+				B0535E181CB1DE01005941BB /* ZazCarUITests */,
+				B0535E261CB1DE16005941BB /* ZazCarTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B0535DFE1CB1DAE0005941BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0535E0E1CB1DAE1005941BB /* LaunchScreen.storyboard in Resources */,
+				B0535E3A1CB1EBEF005941BB /* RepositorieCell.xib in Resources */,
+				B0535E0B1CB1DAE1005941BB /* Assets.xcassets in Resources */,
+				B034FC461CB20CED00010157 /* Configuration.plist in Resources */,
+				B0535E421CB1F2D2005941BB /* PullRequestCell.xib in Resources */,
+				B0535E091CB1DAE1005941BB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0535E171CB1DE01005941BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B034FC471CB20CED00010157 /* Configuration.plist in Resources */,
+				B0535E431CB1F2D2005941BB /* PullRequestCell.xib in Resources */,
+				B0535E3B1CB1EBEF005941BB /* RepositorieCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0535E251CB1DE16005941BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B034FC481CB20CED00010157 /* Configuration.plist in Resources */,
+				B0535E441CB1F2D2005941BB /* PullRequestCell.xib in Resources */,
+				B0535E3C1CB1EBEF005941BB /* RepositorieCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		38809491379F0C271970547B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZazCar/Pods-ZazCar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		617823B22FB402FBEE61872C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZazCar/Pods-ZazCar-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDD98CDCF0B8B0744AA125AC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B0535DFC1CB1DAE0005941BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B034FC351CB1FDB300010157 /* GitHubService.swift in Sources */,
+				B034FC541CBA8CE000010157 /* Item.swift in Sources */,
+				B034FC391CB1FEE700010157 /* PullRequestViewController.swift in Sources */,
+				B034FC581CBA8ED500010157 /* Owner.swift in Sources */,
+				B0535E331CB1E90F005941BB /* RepositorieViewController.swift in Sources */,
+				B034FC421CB20AD100010157 /* Utils.swift in Sources */,
+				B0535E041CB1DAE1005941BB /* AppDelegate.swift in Sources */,
+				B0535E3F1CB1F2D2005941BB /* PullRequestCell.swift in Sources */,
+				B034FC501CBA8CC700010157 /* RepositorieObject.swift in Sources */,
+				B0535E371CB1EBEF005941BB /* RepositorieCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0535E151CB1DE01005941BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B034FC361CB1FDB300010157 /* GitHubService.swift in Sources */,
+				B034FC551CBA8CE000010157 /* Item.swift in Sources */,
+				B034FC3A1CB1FEE700010157 /* PullRequestViewController.swift in Sources */,
+				B034FC591CBA8ED500010157 /* Owner.swift in Sources */,
+				B0535E1C1CB1DE01005941BB /* ZazCarUITests.swift in Sources */,
+				B034FC431CB20AD100010157 /* Utils.swift in Sources */,
+				B0535E381CB1EBEF005941BB /* RepositorieCell.swift in Sources */,
+				B034FC311CB1FCED00010157 /* RepositorieViewController.swift in Sources */,
+				B034FC511CBA8CC700010157 /* RepositorieObject.swift in Sources */,
+				B0535E401CB1F2D2005941BB /* PullRequestCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0535E231CB1DE16005941BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B034FC371CB1FDB300010157 /* GitHubService.swift in Sources */,
+				B034FC561CBA8CE000010157 /* Item.swift in Sources */,
+				B034FC3B1CB1FEE700010157 /* PullRequestViewController.swift in Sources */,
+				B034FC5A1CBA8ED500010157 /* Owner.swift in Sources */,
+				B0535E2A1CB1DE16005941BB /* ZazCarTests.swift in Sources */,
+				B034FC441CB20AD100010157 /* Utils.swift in Sources */,
+				B0535E391CB1EBEF005941BB /* RepositorieCell.swift in Sources */,
+				B034FC321CB1FCED00010157 /* RepositorieViewController.swift in Sources */,
+				B034FC521CBA8CC700010157 /* RepositorieObject.swift in Sources */,
+				B0535E411CB1F2D2005941BB /* PullRequestCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B0535E1F1CB1DE01005941BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0535DFF1CB1DAE0005941BB /* ZazCar */;
+			targetProxy = B0535E1E1CB1DE01005941BB /* PBXContainerItemProxy */;
+		};
+		B0535E2D1CB1DE16005941BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0535DFF1CB1DAE0005941BB /* ZazCar */;
+			targetProxy = B0535E2C1CB1DE16005941BB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B0535E071CB1DAE1005941BB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0535E081CB1DAE1005941BB /* Base */,
+				B034FC3D1CB2009700010157 /* en */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B0535E0C1CB1DAE1005941BB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0535E0D1CB1DAE1005941BB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B0535E101CB1DAE1005941BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B0535E111CB1DAE1005941BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B0535E131CB1DAE1005941BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD811029B69EF390FC894E97 /* Pods-ZazCar.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ZazCar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Finotti.ZazCar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ZazCar/Utils/BridgeFile/BridgeFile.h;
+			};
+			name = Debug;
+		};
+		B0535E141CB1DAE1005941BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 013C354BD13D402F7E635167 /* Pods-ZazCar.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ZazCar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Finotti.ZazCar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ZazCar/Utils/BridgeFile/BridgeFile.h;
+			};
+			name = Release;
+		};
+		B0535E201CB1DE01005941BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ZazCarUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Finotti.ZazCarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ZazCar;
+			};
+			name = Debug;
+		};
+		B0535E211CB1DE01005941BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ZazCarUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Finotti.ZazCarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ZazCar;
+			};
+			name = Release;
+		};
+		B0535E2F1CB1DE16005941BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ZazCarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Finotti.ZazCarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZazCar.app/ZazCar";
+			};
+			name = Debug;
+		};
+		B0535E301CB1DE16005941BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ZazCarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Finotti.ZazCarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZazCar.app/ZazCar";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B0535DFB1CB1DAE0005941BB /* Build configuration list for PBXProject "ZazCar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0535E101CB1DAE1005941BB /* Debug */,
+				B0535E111CB1DAE1005941BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0535E121CB1DAE1005941BB /* Build configuration list for PBXNativeTarget "ZazCar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0535E131CB1DAE1005941BB /* Debug */,
+				B0535E141CB1DAE1005941BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0535E221CB1DE01005941BB /* Build configuration list for PBXNativeTarget "ZazCarUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0535E201CB1DE01005941BB /* Debug */,
+				B0535E211CB1DE01005941BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0535E2E1CB1DE16005941BB /* Build configuration list for PBXNativeTarget "ZazCarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0535E2F1CB1DE16005941BB /* Debug */,
+				B0535E301CB1DE16005941BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B0535DF81CB1DAE0005941BB /* Project object */;
+}
