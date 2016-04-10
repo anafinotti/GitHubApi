@@ -71,7 +71,8 @@ class RepositorieViewController: UIViewController, UITableViewDelegate, UITableV
         self.title = "Git Hub JavaPop"
         self.navigationController?.navigationBar.barStyle = .Black
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        self.setNeedsStatusBarAppearanceUpdate()
+        self.navigationController?.navigationItem.leftBarButtonItem = nil
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
     }
     
     func getRepositories() {
@@ -128,7 +129,9 @@ class RepositorieViewController: UIViewController, UITableViewDelegate, UITableV
         
         self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
-        self.presentViewController(pullRequestViewController, animated: true, completion: nil)
+        self.navigationController!.pushViewController(pullRequestViewController, animated: true)
+        
+        //self.presentViewController(pullRequestViewController, animated: true, completion: nil)
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -139,5 +142,19 @@ class RepositorieViewController: UIViewController, UITableViewDelegate, UITableV
         return 1
     }
 
+    // MARK: - Storyboard
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "seguePushToPullRequest") {
+            let pullRequestViewController = segue.destinationViewController as! PullRequestViewController
+            
+            let row: Int = (self.tableView?.indexPathForSelectedRow)!.row
+            
+            //let repositoryDictionary: [String: AnyObject] = self.repositoriesArray[row]
+            pullRequestViewController.repositorieItem = self.repositorie.items![row]
+            
+            self.tableView?.deselectRowAtIndexPath((self.tableView?.indexPathForSelectedRow)!, animated: true)
+        }
+    }
 }
 

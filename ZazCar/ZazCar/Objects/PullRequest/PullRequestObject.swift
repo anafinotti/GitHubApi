@@ -14,7 +14,9 @@ public class PullRequestObject: Mappable {
     var id: Int?
     var title: String?
     var body: String?
+    var htmlUrl: String?
     var user: User?
+
     
     
     public required init?(_ map: Map) {
@@ -30,6 +32,7 @@ public class PullRequestObject: Mappable {
         id <- map["id"]
         title <- map["title"]
         body <- map["body"]
+        htmlUrl <- map["html_url"]
         user <- map["user"]
     }
 }

@@ -20,21 +20,32 @@ class PullRequestCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        configuration()
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
-    func cellConfiguration(repositorieItem: Item) {
-        repositorieNameLabel.text = repositorieItem.name
-        descriptionLabel.text = repositorieItem.description
-        forkLabel.text = String(format:"%.0f", repositorieItem.forks!)
-        starLabel.text = String(format:"%.0f", repositorieItem.stargazersCount!)
-        usernameLabel.text = repositorieItem.owner?.login
-        nameLabel.text = repositorieItem.full_name
+    func configuration() {
+        pullRequestTitleLabel.adjustsFontSizeToFitWidth = true
+        descriptionLabel.adjustsFontSizeToFitWidth = true
+        usernameLabel.adjustsFontSizeToFitWidth = true
+        nameLabel.adjustsFontSizeToFitWidth = true
         
-        Alamofire.request(.GET, (repositorieItem.owner?.avatarUrl!)!)
+        pullRequestTitleLabel.textColor = UIColor(rgba:"#2C67F2")
+        usernameLabel.textColor = UIColor(rgba:"#2C67F2")
+    }
+    
+    func cellConfiguration(pullRequestObject: PullRequestObject) {
+        pullRequestTitleLabel.text = pullRequestObject.title
+        descriptionLabel.text = pullRequestObject.body
+        
+        usernameLabel.text = pullRequestObject.user?.login
+        nameLabel.text = pullRequestObject.user?.login
+        
+        Alamofire.request(.GET, (pullRequestObject.user?.avatarUrl!)!)
             .responseImage { response in
                 debugPrint(response)
                 
@@ -48,6 +59,4 @@ class PullRequestCell: UITableViewCell {
                 }
         }
     }
-
-    
 }

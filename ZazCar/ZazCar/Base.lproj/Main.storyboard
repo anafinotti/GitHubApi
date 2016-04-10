@@ -49,6 +49,7 @@
                     <navigationItem key="navigationItem" id="KTL-mQ-oqE"/>
                     <connections>
                         <outlet property="tableView" destination="byU-pD-B6S" id="yWY-FS-VSJ"/>
+                        <segue destination="YUf-zX-rOP" kind="push" identifier="seguePushToPullRequest" id="QBo-sj-rcu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Crl-J2-FWD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -80,6 +81,7 @@
                             <constraint firstItem="Unx-cJ-fiP" firstAttribute="top" secondItem="hRy-0h-ET8" secondAttribute="top" id="mM5-yk-89N"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="XdM-AD-3Ld"/>
                     <connections>
                         <outlet property="tableView" destination="Unx-cJ-fiP" id="YiL-yM-syP"/>
                     </connections>

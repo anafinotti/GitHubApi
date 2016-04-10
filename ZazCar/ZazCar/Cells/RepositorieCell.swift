@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import AlamofireImage
+import UIColor_Hex_Swift
 
 class RepositorieCell: UITableViewCell {
 
@@ -22,10 +23,23 @@ class RepositorieCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        configuration()
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    func configuration() {
+        repositorieNameLabel.adjustsFontSizeToFitWidth = true
+        usernameLabel.adjustsFontSizeToFitWidth = true
+        nameLabel.adjustsFontSizeToFitWidth = true
+        
+        repositorieNameLabel.textColor = UIColor(rgba:"#2C67F2")
+        usernameLabel.textColor = UIColor(rgba:"#2C67F2")
+        forkLabel.textColor = UIColor(rgba: "#E0AA49")
+        starLabel.textColor = UIColor(rgba: "#E0AA49")
     }
     
     func cellConfiguration(repositorieItem: Item) {
