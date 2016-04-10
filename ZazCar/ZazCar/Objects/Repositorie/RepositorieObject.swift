@@ -17,8 +17,12 @@ public class RepositorieObject : Mappable {
     var incomplete_results: Bool?
     var items: [Item]?
     
-    required public init?(_ map: Map) {
+    public required init?(_ map: Map) {
         
+    }
+    
+    public init() {
+        //
     }
     
     // Mappable

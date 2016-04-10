@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
 
 class RepositorieCell: UITableViewCell {
 
@@ -20,20 +22,32 @@ class RepositorieCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        cellConfiguration()
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
-    func cellConfiguration() {
+    func cellConfiguration(repositorieItem: Item) {
+        repositorieNameLabel.text = repositorieItem.name
+        descriptionLabel.text = repositorieItem.description
+        forkLabel.text = String(format:"%.0f", repositorieItem.forks!)
+        starLabel.text = String(format:"%.0f", repositorieItem.stargazersCount!)
+        usernameLabel.text = repositorieItem.owner?.login
+        nameLabel.text = repositorieItem.full_name
         
+        Alamofire.request(.GET, (repositorieItem.owner?.avatarUrl!)!)
+            .responseImage { response in
+                debugPrint(response)
+                
+                let image = response.result.value
+                
+                if image != nil {
+                    self.usernameImage.image = image
+                }
+                else {
+                    self.usernameImage.image = UIImage(named: "user_image")
+                }
+        }
     }
-    
-    func setupRepositorieCell() {
-        
-    }
-    
 }

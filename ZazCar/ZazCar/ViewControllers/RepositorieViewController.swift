@@ -12,27 +12,43 @@ import ObjectMapper
 class RepositorieViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet var tableView: UITableView!
+    
+    var repositorie = RepositorieObject()
+    var language = String()
+    var page: Int = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        language = getLanguage()
+        
         getRepositories()
+        
+        tableViewConfiguration()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    
+    func getLanguage() -> String {
+        return Utils.getConfigurationValueForKey("language")
+    }
+    
     func tableViewConfiguration() {
         tableView.dataSource = self
         tableView.delegate = self
         
-        self.view.backgroundColor = UIColor.whiteColor()
+        tableView.registerNib(UINib(nibName: "RepositorieCell", bundle: nil), forCellReuseIdentifier: "RepositorieCell")
+
         
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "RepositorieCell")
+        self.view.backgroundColor = UIColor.whiteColor()
         
         tableView.allowsSelection = true
         tableView.separatorStyle = .None
         
-        tableView.selectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: false, scrollPosition: .Middle)
+       // tableView.selectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: false, scrollPosition: .Middle)
         
     }
     
@@ -43,28 +59,40 @@ class RepositorieViewController: UIViewController, UITableViewDelegate, UITableV
     func getRepositories() {
         let service = GitHubService()
         
-        service.getRepositoriesWithLanguage("Java", page: 1, success: { (itemsArray) in
-            //
-            print(itemsArray)
+        service.getRepositories(language, page: self.page, success: { (repositorieObject) in
+            
+            self.repositorie = repositorieObject
+            
+            self.tableView.reloadData()
+            
             }) { (error) in
-                print("erro")
+                print(error)
         }
-        
-//        service.getRepositoriesWithLanguage("Java", page: 1, success: { (itemsArray, totalRepositoriesCount) in
-//            let repositorie = Mapper<RepositorieObject>().map(JSONString)
-//            }) { (error) in
-//                //
-//        }
     }
     
     
     // MARK: - TableView delegate
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        
+        if(repositorie.items != nil) {
+            return (repositorie.items?.count)!
+        }
+        return 0
+        
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: RepositorieCell = (tableView.dequeueReusableCellWithIdentifier("RepositorieCell") as? RepositorieCell)!
+//        var cell: RepositorieCell! = tableView.dequeueReusableCellWithIdentifier("RepositorieCell") as? RepositorieCell
+//        
+//        if cell == nil {
+//            tableView.registerNib(UINib(nibName: "RepositorieCell", bundle: nil), forCellReuseIdentifier: "RepositorieCell")
+//            cell = tableView.dequeueReusableCellWithIdentifier("RepositorieCell") as? RepositorieCell
+//        }
+//        
+
+        let cell = tableView.dequeueReusableCellWithIdentifier("RepositorieCell", forIndexPath: indexPath) as! RepositorieCell
+
+        cell.cellConfiguration(repositorie.items![indexPath.row])
         
         return cell
     }
@@ -82,7 +110,7 @@ class RepositorieViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 45
+        return 118
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

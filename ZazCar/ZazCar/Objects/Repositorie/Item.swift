@@ -29,7 +29,7 @@ class Item :Mappable {
     var url: String?
     var fork: Bool?
     var notificationsUrl: String?
-    var internalBaseClassDescription: String?
+    var description: String?
     var collaboratorsUrl: String?
     var deploymentsUrl: String?
     var languagesUrl: String?
@@ -105,7 +105,7 @@ class Item :Mappable {
         url      <- map["url"]
         fork <- map["fork"]
         notificationsUrl        <- map["notifications_url"]
-        internalBaseClassDescription      <- map["internalBaseClassDescription"]
+        description      <- map["description"]
         collaboratorsUrl <- map["collaborators_url"]
         deploymentsUrl        <- map["deployments_url"]
         languagesUrl      <- map["languages_url"]

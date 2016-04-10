@@ -4,5 +4,7 @@
 <dict>
 	<key>serverAddress</key>
 	<string>https://api.github.com</string>
+	<key>language</key>
+	<string>Java</string>
 </dict>
 </plist>
