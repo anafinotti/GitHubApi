@@ -9,7 +9,7 @@
 import UIKit
 import ObjectMapper
 
-class Item :Mappable {
+public class Item :Mappable {
     var id: Int?
     var name: String?
     var full_name: String?
@@ -81,11 +81,15 @@ class Item :Mappable {
     
     var owner: Owner?
     
-    required init?(_ map: Map) {
+    required public init?(_ map: Map) {
         
     }
     
-    func mapping(map: Map) {
+    public init() {
+        //
+    }
+    
+    public func mapping(map: Map) {
         id        <- map["id"]
         name      <- map["name"]
         full_name <- map["full_name"]

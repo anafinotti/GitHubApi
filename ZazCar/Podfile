@@ -10,5 +10,7 @@ pod 'UIScrollView-InfiniteScroll'
 pod 'ObjectMapper', '~> 1.2'
 pod 'Alamofire', '~> 3.3'
 pod 'AlamofireImage', '~> 2.0'
+pod 'UIColor_Hex_Swift', '~> 2.0'
+pod 'KRProgressHUD'
 end
 

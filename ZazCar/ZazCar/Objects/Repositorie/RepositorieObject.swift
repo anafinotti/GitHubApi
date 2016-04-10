@@ -7,8 +7,6 @@
 //
 
 import Foundation
-import Argo
-import Curry
 import ObjectMapper
 
 public class RepositorieObject : Mappable {

@@ -58,7 +58,7 @@
         <!--Pull Request View Controller-->
         <scene sceneID="EoG-tf-Zdn">
             <objects>
-                <viewController id="YUf-zX-rOP" customClass="PullRequestViewController" customModule="ZazCar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PullRequestViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YUf-zX-rOP" customClass="PullRequestViewController" customModule="ZazCar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3XP-PT-8g3"/>
                         <viewControllerLayoutGuide type="bottom" id="hQh-W3-VtY"/>

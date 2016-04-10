@@ -26,4 +26,18 @@ class GitHubService: NSObject {
             success!(repositorieObject: repositorie!)
         }
     }
+    
+    func getPullRequests(username: String, repository: String, page: NSNumber, success: ((pullRequestObject: PullRequestObject) -> Void)?, failure: ((NSError?) -> Void)?) {
+        
+        var url: String = Utils.getConfigurationValueForKey("serverAddress")
+        url = "\(url)/repos/\(username)/\(repository)/pulls"
+        
+        Alamofire.request(.GET, url, parameters: ["page": page]).responseJSON { response in
+            print(response.response?.allHeaderFields)
+            
+            let pullRequest = Mapper<PullRequestObject>().map(response.result.value)
+            
+            success!(pullRequestObject: pullRequest!)
+        }
+    }
 }

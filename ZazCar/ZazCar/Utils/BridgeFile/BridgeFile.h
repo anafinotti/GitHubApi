@@ -10,5 +10,6 @@
 #define BridgeFile_h
 
 #import <AFNetworking/AFNetworking.h>
+#import <UIScrollView_InfiniteScroll/UIScrollView+InfiniteScroll.h>
 
 #endif /* BridgeFile_h */

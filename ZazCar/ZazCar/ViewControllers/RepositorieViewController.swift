@@ -8,6 +8,8 @@
 
 import UIKit
 import ObjectMapper
+import UIScrollView_InfiniteScroll
+import KRProgressHUD
 
 class RepositorieViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -22,13 +24,30 @@ class RepositorieViewController: UIViewController, UITableViewDelegate, UITableV
         
         language = getLanguage()
         
+        setupNavigationBar()
+        
         getRepositories()
         
         tableViewConfiguration()
+        addInfiniteScrollView()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func addInfiniteScrollView() {
+        tableView.infiniteScrollIndicatorStyle = .White
+        
+        tableView.addInfiniteScrollWithHandler { (scrollView) -> Void in
+            let tableView = scrollView as! UITableView
+            
+            self.page += 1
+            
+            self.getRepositories()
+            
+            tableView.finishInfiniteScroll()
+        }
     }
     
     
@@ -42,30 +61,40 @@ class RepositorieViewController: UIViewController, UITableViewDelegate, UITableV
         
         tableView.registerNib(UINib(nibName: "RepositorieCell", bundle: nil), forCellReuseIdentifier: "RepositorieCell")
 
-        
         self.view.backgroundColor = UIColor.whiteColor()
         
         tableView.allowsSelection = true
         tableView.separatorStyle = .None
-        
-       // tableView.selectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: false, scrollPosition: .Middle)
-        
     }
     
-    
-    func setupViewConfiguration() {
+    func setupNavigationBar () {
+        self.title = "Git Hub JavaPop"
+        self.navigationController?.navigationBar.barStyle = .Black
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        self.setNeedsStatusBarAppearanceUpdate()
     }
     
     func getRepositories() {
         let service = GitHubService()
         
+        KRProgressHUD.show(message: "Loading...")
         service.getRepositories(language, page: self.page, success: { (repositorieObject) in
-            
-            self.repositorie = repositorieObject
+
+            KRProgressHUD.dismiss()
+            if(self.repositorie.items == nil) {
+                self.repositorie = repositorieObject
+            }
+            else {
+                var items: [Item]
+                
+                items = repositorieObject.items!
+                self.repositorie.items?.appendContentsOf(items)
+            }
             
             self.tableView.reloadData()
             
             }) { (error) in
+                KRProgressHUD.dismiss()
                 print(error)
         }
     }
@@ -82,14 +111,7 @@ class RepositorieViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        var cell: RepositorieCell! = tableView.dequeueReusableCellWithIdentifier("RepositorieCell") as? RepositorieCell
-//        
-//        if cell == nil {
-//            tableView.registerNib(UINib(nibName: "RepositorieCell", bundle: nil), forCellReuseIdentifier: "RepositorieCell")
-//            cell = tableView.dequeueReusableCellWithIdentifier("RepositorieCell") as? RepositorieCell
-//        }
-//        
-
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("RepositorieCell", forIndexPath: indexPath) as! RepositorieCell
 
         cell.cellConfiguration(repositorie.items![indexPath.row])
@@ -99,14 +121,14 @@ class RepositorieViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("did select row: \(indexPath.row)")
-//        
-//        
-//        if (indexPath.row == selectedCell) {
-//            return
-//        }
-//        
-//        selectedCell = indexPath.row
         
+        let pullRequestViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PullRequestViewController") as! PullRequestViewController
+        
+        pullRequestViewController.repositorieItem = self.repositorie.items![indexPath.row]
+        
+        self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        self.presentViewController(pullRequestViewController, animated: true, completion: nil)
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {

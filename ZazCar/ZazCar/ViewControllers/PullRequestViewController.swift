@@ -11,30 +11,38 @@ import UIKit
 class PullRequestViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
     @IBOutlet var tableView: UITableView!
+    
+    var repositorieItem = Item()
+    var page: Int = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupNavigationBar()
+        tableViewConfiguration()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+
     func tableViewConfiguration() {
         tableView.dataSource = self
         tableView.delegate = self
         
+        tableView.registerNib(UINib(nibName: "PullRequestCell", bundle: nil), forCellReuseIdentifier: "PullRequestCell")
+        
         self.view.backgroundColor = UIColor.whiteColor()
         
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "PullRequestCell")
-        
-        tableView.allowsSelection = false
+        tableView.allowsSelection = true
         tableView.separatorStyle = .None
-        
-         tableView.selectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: false, scrollPosition: .Middle)
-        
     }
     
-    
-    func setupViewConfiguration() {
+    func setupNavigationBar () {
+        self.title = self.repositorieItem.name
+        self.navigationController?.navigationBar.barStyle = .Black
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        self.setNeedsStatusBarAppearanceUpdate()
     }
     
     
@@ -50,21 +58,11 @@ class PullRequestViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("did select row: \(indexPath.row)")
-        
-        // let selectedCell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
-        //selectedCell.contentView.backgroundColor = UIColor(rgba: Utils.init().selectedMenuColor)
-//        
-//        if (indexPath.row == selectedCell) {
-//            return
-//        }
-//        
-//        selectedCell = indexPath.row
         
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 45
+        return 118
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

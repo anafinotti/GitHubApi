@@ -31,6 +31,12 @@
 		B034FC581CBA8ED500010157 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034FC571CBA8ED500010157 /* Owner.swift */; };
 		B034FC591CBA8ED500010157 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034FC571CBA8ED500010157 /* Owner.swift */; };
 		B034FC5A1CBA8ED500010157 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034FC571CBA8ED500010157 /* Owner.swift */; };
+		B034FC5D1CBAE3F900010157 /* PullRequestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034FC5C1CBAE3F900010157 /* PullRequestObject.swift */; };
+		B034FC5E1CBAE3F900010157 /* PullRequestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034FC5C1CBAE3F900010157 /* PullRequestObject.swift */; };
+		B034FC5F1CBAE3F900010157 /* PullRequestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034FC5C1CBAE3F900010157 /* PullRequestObject.swift */; };
+		B034FC611CBAE4E100010157 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034FC601CBAE4E100010157 /* User.swift */; };
+		B034FC621CBAE4E100010157 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034FC601CBAE4E100010157 /* User.swift */; };
+		B034FC631CBAE4E100010157 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034FC601CBAE4E100010157 /* User.swift */; };
 		B0535E041CB1DAE1005941BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0535E031CB1DAE1005941BB /* AppDelegate.swift */; };
 		B0535E091CB1DAE1005941BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0535E071CB1DAE1005941BB /* Main.storyboard */; };
 		B0535E0B1CB1DAE1005941BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0535E0A1CB1DAE1005941BB /* Assets.xcassets */; };
@@ -81,6 +87,8 @@
 		B034FC4F1CBA8CC700010157 /* RepositorieObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RepositorieObject.swift; path = Objects/Repositorie/RepositorieObject.swift; sourceTree = "<group>"; };
 		B034FC531CBA8CE000010157 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Item.swift; path = Objects/Repositorie/Item.swift; sourceTree = "<group>"; };
 		B034FC571CBA8ED500010157 /* Owner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Owner.swift; path = Objects/Repositorie/Owner.swift; sourceTree = "<group>"; };
+		B034FC5C1CBAE3F900010157 /* PullRequestObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PullRequestObject.swift; path = Objects/PullRequest/PullRequestObject.swift; sourceTree = "<group>"; };
+		B034FC601CBAE4E100010157 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Objects/PullRequest/User.swift; sourceTree = "<group>"; };
 		B0535E001CB1DAE0005941BB /* ZazCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZazCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0535E031CB1DAE1005941BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0535E081CB1DAE1005941BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -163,6 +171,7 @@
 		B034FC491CB227F500010157 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				B034FC5B1CBAE3D200010157 /* PullRequest */,
 				B034FC4E1CBA8C7A00010157 /* Repositorie */,
 			);
 			name = Objects;
@@ -176,6 +185,15 @@
 				B034FC571CBA8ED500010157 /* Owner.swift */,
 			);
 			name = Repositorie;
+			sourceTree = "<group>";
+		};
+		B034FC5B1CBAE3D200010157 /* PullRequest */ = {
+			isa = PBXGroup;
+			children = (
+				B034FC5C1CBAE3F900010157 /* PullRequestObject.swift */,
+				B034FC601CBAE4E100010157 /* User.swift */,
+			);
+			name = PullRequest;
 			sourceTree = "<group>";
 		};
 		B0535DF71CB1DAE0005941BB = {
@@ -461,11 +479,13 @@
 			files = (
 				B034FC351CB1FDB300010157 /* GitHubService.swift in Sources */,
 				B034FC541CBA8CE000010157 /* Item.swift in Sources */,
+				B034FC5D1CBAE3F900010157 /* PullRequestObject.swift in Sources */,
 				B034FC391CB1FEE700010157 /* PullRequestViewController.swift in Sources */,
 				B034FC581CBA8ED500010157 /* Owner.swift in Sources */,
 				B0535E331CB1E90F005941BB /* RepositorieViewController.swift in Sources */,
 				B034FC421CB20AD100010157 /* Utils.swift in Sources */,
 				B0535E041CB1DAE1005941BB /* AppDelegate.swift in Sources */,
+				B034FC611CBAE4E100010157 /* User.swift in Sources */,
 				B0535E3F1CB1F2D2005941BB /* PullRequestCell.swift in Sources */,
 				B034FC501CBA8CC700010157 /* RepositorieObject.swift in Sources */,
 				B0535E371CB1EBEF005941BB /* RepositorieCell.swift in Sources */,
@@ -478,11 +498,13 @@
 			files = (
 				B034FC361CB1FDB300010157 /* GitHubService.swift in Sources */,
 				B034FC551CBA8CE000010157 /* Item.swift in Sources */,
+				B034FC5E1CBAE3F900010157 /* PullRequestObject.swift in Sources */,
 				B034FC3A1CB1FEE700010157 /* PullRequestViewController.swift in Sources */,
 				B034FC591CBA8ED500010157 /* Owner.swift in Sources */,
 				B0535E1C1CB1DE01005941BB /* ZazCarUITests.swift in Sources */,
 				B034FC431CB20AD100010157 /* Utils.swift in Sources */,
 				B0535E381CB1EBEF005941BB /* RepositorieCell.swift in Sources */,
+				B034FC621CBAE4E100010157 /* User.swift in Sources */,
 				B034FC311CB1FCED00010157 /* RepositorieViewController.swift in Sources */,
 				B034FC511CBA8CC700010157 /* RepositorieObject.swift in Sources */,
 				B0535E401CB1F2D2005941BB /* PullRequestCell.swift in Sources */,
@@ -495,11 +517,13 @@
 			files = (
 				B034FC371CB1FDB300010157 /* GitHubService.swift in Sources */,
 				B034FC561CBA8CE000010157 /* Item.swift in Sources */,
+				B034FC5F1CBAE3F900010157 /* PullRequestObject.swift in Sources */,
 				B034FC3B1CB1FEE700010157 /* PullRequestViewController.swift in Sources */,
 				B034FC5A1CBA8ED500010157 /* Owner.swift in Sources */,
 				B0535E2A1CB1DE16005941BB /* ZazCarTests.swift in Sources */,
 				B034FC441CB20AD100010157 /* Utils.swift in Sources */,
 				B0535E391CB1EBEF005941BB /* RepositorieCell.swift in Sources */,
+				B034FC631CBAE4E100010157 /* User.swift in Sources */,
 				B034FC321CB1FCED00010157 /* RepositorieViewController.swift in Sources */,
 				B034FC521CBA8CC700010157 /* RepositorieObject.swift in Sources */,
 				B0535E411CB1F2D2005941BB /* PullRequestCell.swift in Sources */,
